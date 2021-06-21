@@ -1,0 +1,93 @@
+.form {
+    margin-bottom: 90px;
+    .form_wrap {
+        background: #f0f0f0;
+        border-radius: 40px;
+        padding: 20px 35px;
+        filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.1));
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-gap: 30px;
+        align-items: center;
+        @media (max-width: 990px) {
+            padding: 15px 10px;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+        .form_info {
+            display: flex;
+            align-items: center;
+            @media (max-width: 990px) {
+                justify-content: center;
+                width: 100%;
+            }
+            img {
+                display: block;
+                margin-right: 30px;
+                @media (max-width: 990px) {
+                    margin-right: 20px;
+                }
+            }
+            .form_title {
+                font: 700 1.56rem 'Inter', sans-serif;
+                @media (max-width: 990px) {
+                    font: 700 1.2rem 'Inter', sans-serif;
+                }
+                br {
+                    @media (max-width: 990px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .form_feedback {
+            display: grid;
+            grid-template-columns: 2fr 1fr 180px;
+            grid-gap: 30px;
+            @media (max-width: 1200px) {
+                grid-gap: 15px;
+                grid-template-columns: 3fr 2fr 160px;
+            }
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+            .form_feedback_input {
+                display: flex;
+                align-items: center;
+                position: relative;
+                svg {
+                    position: absolute;
+                    left: 20px;
+                }
+                input {
+                    outline: none;
+                    font: 400 .95rem 'Inter', sans-serif;
+                    width: 100%;
+                    box-sizing: border-box;
+                    border-radius: 40px;
+                    border: none;
+                    padding: 25px 25px 25px 60px;
+                    @media (max-width: 990px) {
+                        padding: 20px 20px 20px 55px;
+                    }
+                }
+            }
+            button {
+                font: 700 1rem 'Inter', sans-serif;
+                text-align: center;
+                border: none;
+                outline: none;
+                padding: 15px;
+                transition: .2s;
+                background: #0032A0;
+                box-shadow: 0px 8px 30px rgba(33, 94, 233, 0.4);
+                border-radius: 40px;
+                color: #fff;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
