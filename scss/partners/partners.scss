@@ -10,6 +10,8 @@
         font: 700 1.875rem 'Inter', sans-serif;
         @media (max-width: 990px) {
             font: 700 1.2rem 'Inter', sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
             margin-bottom: 15px;
         }
     }

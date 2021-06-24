@@ -1,0 +1,171 @@
+.tabs__content {
+    display: none;
+    /* по умолчанию прячем все блоки */
+}
+
+.tabs__content.active {
+    display: block;
+    /* по умолчанию показываем нужный блок */
+}
+
+.tab {
+    position: relative;
+    z-index: 9;
+    .container {
+        position: relative;
+    }
+    .line_1 {
+        position: absolute;
+        left: -80px;
+        bottom: -60px;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+    .tabs {
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        border-radius: 40px;
+        background: transparent;
+        @media (max-width: 990px) {
+            border-radius: none;
+            box-shadow: none;
+        }
+    }
+    .tabs__caption {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width: 990px) {
+            grid-template-columns: 1fr;
+        }
+        li:first-child {
+            border-radius: 40px 0 0 0;
+            @media (max-width: 990px) {
+                border-radius: 0;
+            }
+        }
+        li:last-child {
+            border-radius: 0 40px 0 0;
+            @media (max-width: 990px) {
+                border-radius: 0;
+            }
+        }
+        li {
+            border: 1px solid #E3E3E3;
+            padding: 15px 10px;
+            position: relative;
+            cursor: pointer;
+            z-index: 9;
+            font: 400 1.2rem 'Inter', sans-serif;
+            text-align: center;
+            color: #FF4713;
+        }
+        .active {
+            border: 2px solid #FF4713;
+            font-weight: 700;
+        }
+    }
+    .tabs__content {
+        padding: 30px 30px 20px 30px;
+        @media (max-width: 990px) {
+            border: 1px solid #E3E3E3;
+        }
+        @media (max-width: 576px) {
+            padding: 25px 10px;
+        }
+        .tabs_wrap {
+            .tabs_title {
+                text-align: center;
+                margin-bottom: 30px;
+                font: 400 1.2rem 'Inter', sans-serif;
+                span {
+                    font-weight: 700;
+                    color: #0032A0;
+                }
+            }
+            .tabs_title_2 {
+                text-align: center;
+                margin-bottom: 30px;
+                font: 700 1.8rem 'Inter', sans-serif;
+                @media (max-width: 990px) {
+                    font: 700 1.2rem 'Inter', sans-serif;
+                }
+            }
+            .tabs_list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 40px;
+                padding: 0;
+                list-style-type: none;
+                margin: 0 0 30px 0;
+                @media (max-width: 990px) {
+                    grid-template-columns: 1fr;
+                    grid-gap: 30px;
+                }
+                li {
+                    position: relative;
+                    padding-left: 30px;
+                    font: 400 1rem/23px 'Inter', sans-serif;
+                    svg {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+            .tabs_list_2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 30px;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                margin-bottom: 50px;
+                @media (max-width: 990px) {
+                    grid-template-columns: 1fr;
+                    grid-gap: 50px;
+                }
+                @media (max-width: 576px) {
+                    padding-left: 15px;
+                }
+                li {
+                    position: relative;
+                    padding-left: 60px;
+                    font: 400 1.125rem 'Inter', sans-serif;
+                    svg {
+                        position: absolute;
+                        left: -25px;
+                        top: -35px;
+                    }
+                    span {
+                        position: absolute;
+                        left: 7px;
+                        top: -2px;
+                        font: 700 1.56rem 'Inter', sans-serif;
+                        z-index: 9;
+                        color: #FF4713;
+                    }
+                }
+            }
+            .tabs_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    padding: 15px 35px;
+                    color: #fff;
+                    display: block;
+                    font: 700 1rem 'Inter', sans-serif;
+                    background: #0032A0;
+                    text-align: center;
+                    box-shadow: 0px 8px 30px rgba(33, 94, 233, 0.4);
+                    border-radius: 40px;
+                    @media (max-width: 576px) {
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+}
